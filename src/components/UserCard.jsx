@@ -1,15 +1,19 @@
 import React from 'react'
 import axios from 'axios'
 
-const UserCard = ({user , gettAllUsers , setUpdateInfo , changeD}) => {
+const UserCard = ({user , gettAllUsers , setUpdateInfo , changeD , changeDeleteW , setUserInfo}) => {
 
-    const deleteUserById = id => {
+
+    const deleteUserById = (id , user) => {
         const URL = `https://users-crud1.herokuapp.com/users/${id}/`
 
+        setUserInfo(user)
+        
         axios.delete (URL)
         .then (res => {
             console.log(res.data)
             gettAllUsers()
+            changeDeleteW()
         })
         .catch (err => console.log(err))
     }
@@ -28,7 +32,7 @@ const UserCard = ({user , gettAllUsers , setUpdateInfo , changeD}) => {
         <div className='cardTitles'>Birthday: </div>
         <div>{user.birthday}</div>
         <div className='usersCardBtns'>
-            <button className='cardBtn' id='delete' onClick={() => deleteUserById(user.id)}>🗑</button>
+            <button className='cardBtn' id='delete' onClick={() => deleteUserById(user.id , user)}>🗑</button>
             <button className='cardBtn' onClick={update}>🖍</button>
         </div>
     </article>

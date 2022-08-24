@@ -135,8 +135,6 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
   border: 2px inset gray;
   background-color: #242424;
 }
@@ -166,6 +164,37 @@ hr {
   height: 35px;
   width: 35px;
   border-radius: 10px;
+}
+
+.deleteWindow {
+  
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+.deleteWindowBack {
+  background-color: black;
+  opacity: 95%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.deleteWindow2 {
+  
+  flex-direction: column;
+  position: relative;
+  gap: 2vh;
+
+}
+
+.deleteWindowBtn {
+  width: 50px;
+  align-self: center;
 }
 
 #delete {

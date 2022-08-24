@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import DeleteWindow from './DeleteWindow'
 import UserCard from './UserCard'
 
-const UserList = ({allUsers , getAllUsers , setUpdateInfo , changeD }) => {
+const UserList = ({allUsers , getAllUsers , setUpdateInfo , changeD , changeDeleteW , deleteWindow }) => {
 
-
+  const [userInfo, setUserInfo] = useState()
 
   return (
     <div className='usersList'>
@@ -17,9 +18,11 @@ const UserList = ({allUsers , getAllUsers , setUpdateInfo , changeD }) => {
 
         { allUsers?.length >0 ? 
         allUsers?.map (user => 
-            <UserCard key={user.id} user={user} gettAllUsers={getAllUsers} setUpdateInfo={setUpdateInfo} changeD={changeD} />
+            <UserCard key={user.id} user={user} gettAllUsers={getAllUsers} setUpdateInfo={setUpdateInfo} changeD={changeD} changeDeleteW={changeDeleteW} deleteWindow={deleteWindow} setUserInfo={setUserInfo} />
             )
          : "No users registered"}
+
+         <DeleteWindow deleteWindow={deleteWindow} changeDeleteW={changeDeleteW} userInfo={userInfo} />
 
         </div>
     </div>

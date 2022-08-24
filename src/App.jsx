@@ -35,6 +35,12 @@ function App() {
     setForD(!forD)
   }
 
+  const [deleteWindow, setDeleteWindow] = useState(false)
+
+  const changeDeleteW = () => {
+    setDeleteWindow (!deleteWindow)
+  }
+
   return (
     <div className="App">
 
@@ -47,7 +53,9 @@ function App() {
       <UserList allUsers={allUsers} 
       getAllUsers={getAllUsers}
       setUpdateInfo={setUpdateInfo}
-      changeD={changeD} />
+      changeD={changeD}
+      changeDeleteW={changeDeleteW}
+      deleteWindow={deleteWindow} />
 
     </div>
   )
