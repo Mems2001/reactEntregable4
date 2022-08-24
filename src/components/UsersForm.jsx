@@ -60,6 +60,7 @@ const UsersForm = ({getAllUsers , updateInfo , setUpdateInfo , forD , changeD}) 
 
   const changeD2 = () => {
     changeD()
+    
     reset(defaultUser)
     setUpdateInfo()
   }
@@ -68,8 +69,9 @@ const UsersForm = ({getAllUsers , updateInfo , setUpdateInfo , forD , changeD}) 
 
     <div className={`mainFormCont d-${String(forD)}`}>
     <div className={`usersFormCont d-${String(forD)}`}>
-        <button onClick={changeD2} className='formBtn'>✖</button>
+       
     </div>
+    <button onClick={changeD2} className='formBtn'>✖</button>
     <form className={`usersForm d-${String(forD)}`} onSubmit={handleSubmit(submit)}>
         <h2>{updateInfo ? 'Edit User' : 'New User'}</h2>
         <label htmlFor="name">Name: </label>

@@ -28,13 +28,13 @@ body {
   margin: 0;
 }
 
-/* TIPOS */
+/* TYPES */
 
 hr {
   margin: 0;
 }
 
-/* CLASES */
+/* CLASSES */
 
 .App {
   display: flex;
@@ -79,18 +79,19 @@ hr {
 .formBtn {
   position: absolute;
   top: 20%;
-  right: 30%;
+  right: 35%;
   background-color: rgb(100, 0, 0);
   border: none;
   border-radius: 50%;
   height: 30px;
   width: 30px;
+  z-index: 5;
 }
 
 .usersForm {
 
   flex-direction: column;
-  width: 35vw;
+  width: 30vw;
   height: fit-content;
   position: absolute;
   gap: 1vh;
@@ -119,6 +120,7 @@ hr {
 .usersList {
   padding: 5vw;
   position: static;
+  min-width: 75%;
 }
 
 .usersListHeader {
@@ -146,8 +148,9 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  border: 2px inset gray;
+  /* border: 2px inset gray; */
   background-color: #242424;
+  box-shadow: 0px 2px 4px 1px #242424;
 }
 
 .cardName {
@@ -156,6 +159,7 @@ hr {
   background-color: #505050;
   padding: 1vh;
   border-bottom: 2px groove black;
+  border-radius: 5px;
 }
 
 .cardTitles {
@@ -209,6 +213,8 @@ hr {
   align-self: center;
 }
 
-#delete {
+/* IDENTIFIERS */
+
+#deleteB {
   background-color: rgb(100, 0, 0);
 }

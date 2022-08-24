@@ -8,7 +8,7 @@ const UserCard = ({user , gettAllUsers , setUpdateInfo , changeD , changeDeleteW
         const URL = `https://users-crud1.herokuapp.com/users/${id}/`
 
         setUserInfo(user)
-        
+
         axios.delete (URL)
         .then (res => {
             console.log(res.data)
@@ -32,7 +32,7 @@ const UserCard = ({user , gettAllUsers , setUpdateInfo , changeD , changeDeleteW
         <div className='cardTitles'>Birthday: </div>
         <div>{user.birthday}</div>
         <div className='usersCardBtns'>
-            <button className='cardBtn' id='delete' onClick={() => deleteUserById(user.id , user)}>🗑</button>
+            <button className='cardBtn' id='deleteB' onClick={() => deleteUserById(user.id , user)}>🗑</button>
             <button className='cardBtn' onClick={update}>🖍</button>
         </div>
     </article>
