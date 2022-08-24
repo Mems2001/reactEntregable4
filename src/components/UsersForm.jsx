@@ -40,7 +40,10 @@ const UsersForm = ({getAllUsers , updateInfo , setUpdateInfo , forD , changeD}) 
         getAllUsers()
         
     })
-    .catch (err => console.log (err))
+    .catch (err => {
+      console.log (err)
+      alert('user not created')
+    })
 
     reset (defaultUser)
     changeD()
