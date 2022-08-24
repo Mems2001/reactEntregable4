@@ -79,7 +79,7 @@ const UsersForm = ({getAllUsers , updateInfo , setUpdateInfo , forD , changeD}) 
         <input type='date' {...register('birthday')} placeholder='Write your birthday' id='bday'/>
         <label htmlFor="pass">Password: </label>
         <input type='password' {...register('password')} placeholder='Write a password' id='pass'/>
-        <button>{updateInfo ? 'Update User' : 'Create User'}</button>
+        <button className='formBtn2'>{updateInfo ? 'Update User' : 'Create User'}</button>
     </form>
     </div>
     
